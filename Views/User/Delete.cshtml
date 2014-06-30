@@ -1,0 +1,235 @@
+﻿@model SoulMate.Models.User
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>User</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AboutMe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AboutMe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Picture)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Picture)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gender)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Age)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Age)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Height)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Height)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Physique)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Physique)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Complexion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Complexion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Religion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Religion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Caste)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Caste)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MarritalStatus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MarritalStatus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MotherTongue)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MotherTongue)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Country)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Education)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Education)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Profession)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Profession)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Job)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Job)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Standard)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Standard)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Contact)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Contact)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PGender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PGender)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PAge)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PAge)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PHeight)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PHeight)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PPhysique)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PPhysique)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PComplexion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PComplexion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PReligion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PReligion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PCaste)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCaste)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMarritalStatus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMarritalStatus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PCountry)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCountry)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PCity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCity)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "SoulMate-Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SoulMate.Models.User
+<div style="padding:20px 15px 30px 15px;">
+        <h1><span>Login</span> Here</h1>
+
+<br>
+<br>
+
+<!--<form method="post" action="/User">
+<b>Username : <input type="text" name="usern">
+<br><br>
+<b>Password : <input type="password" name="pas">
+<br><br>
+<input type="submit" value="Login" >
+<br><br>
+</form>
+    <br>
+    <br>
+    <h3><b><a href="/Home/Register">Register Yourself Here</a></b></h3>-->
+
+    @using (Html.BeginForm("Login_check","Home",FormMethod.Get)) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+                @Html.ValidationMessageFor(m => m.Name)
+           <br />
+        <br />
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @ViewBag.Message
+                @Html.ValidationMessageFor(m => m.Password)
+
+            <br />
+        <br />
+        <input type="submit" value="Log in" />
+    <br />
+        <br />
+    <p>
+      <h4>  @Html.ActionLink("Register", "Register") if you don't have an account. </h4>
+    </p>
+}
+
+
+    </div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

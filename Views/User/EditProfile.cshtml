@@ -1,0 +1,358 @@
+﻿@{
+    ViewBag.Title = "EditProfile";
+    Layout = "~/Views/Shared/User.cshtml";
+}
+
+@model SoulMate.Models.User
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link href="~/Content/style.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="~/Image/x-icon" href="favicon.ico"/>
+<link href="css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<!--Main Wraper-->
+<div class="siteWraper">
+	<!--Inner Wraper-->
+  <div class="innerWraper">
+    	
+        <!--Member Listing-->
+    	<div class="searchResultbox">
+        <br />
+        <br />
+        <br />
+        <br />
+
+        	<h2><span class="tr">Edit </span>Profile</h2>
+        	<!--User Detail-->
+            <form method="post" action="/User/EditProfile">	
+        	<div class="userProfilewraper left"> 
+               @Html.HiddenFor(model => model.Id)
+            	<div class="userPicbox left">
+                	<div class="userProfilepic">
+                    	<div class="userPicture">
+                        <input type="file" name="img" />
+                            <img src="~/File/@Model.Picture" width="200" alt="" />
+                    	</div>                 
+                        
+                        
+                                           </div>
+                                    	<strong>@Html.LabelFor(model => model.AboutMe)</strong>
+                    <br />
+                    @Html.EditorFor(model => model.AboutMe)
+                    @Html.ValidationMessageFor(model => model.Name)
+                    <br /><br /><br />
+                      <!-- <input type="text" id="AboutMe" />-->
+                	<p></p>
+                 <!--<a href="https://www.facebook.com/?q=#/profile.php?id=100001302006138&fref=ts&ref=br_tf" class="profileBtns"><img src="~/Images/profile.png" border="0">Profile on Facebook</a> -->
+
+            	</div>
+                
+                <div class="userFullinfo right">
+                
+                
+                            <form class="form" method="post" action="" >
+                            <h1>Basic Info</h1>
+                            <table align="center"   cellpadding="0" cellspacing="0" border="0">
+                    			<tr>
+                                    <td id="user">
+                                    @Html.LabelFor(model => model.Name)
+                                    </td>
+                                    <td>
+                                         @Html.EditorFor(model => model.Name)
+                                         @Html.ValidationMessageFor(model => model.Name)
+                                    </td>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Password)
+                                    </td>
+                                    <td>
+                                         @Html.EditorFor(model => model.Password)
+                                         @Html.ValidationMessageFor(model => model.Password)
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td id="user">
+                                    @Html.LabelFor(model => model.Gender)
+                                    </td>
+                                    <td>
+                                         @Html.EditorFor(model => model.Gender)
+                                         @Html.ValidationMessageFor(model => model.Gender)
+                                    </td>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Age)
+                                    </td>
+                                    <td>
+                                         @Html.EditorFor(model => model.Age)
+                                         @Html.ValidationMessageFor(model => model.Age)
+                                    </td>
+                                </tr>
+                                
+                                
+                                <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Height)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Height)
+                                    @Html.ValidationMessageFor(model => model.Height)
+                                </td>
+
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Physique)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Physique)
+                                    @Html.ValidationMessageFor(model => model.Physique)
+                                </td>
+                                </tr>
+
+                                <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Complexion)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Complexion)
+                                    @Html.ValidationMessageFor(model => model.Complexion)
+                                </td>
+
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Religion)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Religion)
+                                    @Html.ValidationMessageFor(model => model.Religion)
+                                </td>
+                                </tr>
+
+                                <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Caste)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Caste)
+                                    @Html.ValidationMessageFor(model => model.Caste)
+                                </td>
+
+                                <td id="user">
+                                    @Html.LabelFor(model => model.MarritalStatus)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.MarritalStatus)
+                                    @Html.ValidationMessageFor(model => model.MarritalStatus)
+                                </td>
+                                </tr>
+
+                                 <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.MotherTongue)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.MotherTongue)
+                                    @Html.ValidationMessageFor(model => model.MotherTongue)
+                                </td>
+
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Country)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Country)
+                                    @Html.ValidationMessageFor(model => model.Country)
+                                </td>
+                                </tr>
+
+                                <tr>
+                                        
+                               <td id="user">
+                                    @Html.LabelFor(model => model.City)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.City)
+                                    @Html.ValidationMessageFor(model => model.City)
+                                </td>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Education)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Education)
+                                    @Html.ValidationMessageFor(model => model.Education)
+                                </td>
+                                    </tr>
+
+                                <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Profession)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Profession)
+                                    @Html.ValidationMessageFor(model => model.Profession)
+                                </td>
+                                                         
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Job)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Job)
+                                    @Html.ValidationMessageFor(model => model.Job)
+                                </td>
+                                </tr>
+                                <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Standard)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Standard)
+                                    @Html.ValidationMessageFor(model => model.Standard)
+                                </td>
+                                </tr>
+                                </table>
+
+                <div class="clear"></div>             
+                
+                <h4>Looking for</h4>
+                 			<table align="center"   cellpadding="0" cellspacing="0" border="0">
+        
+                    			<tr>
+                                    <td id="user">
+                                    @Html.LabelFor(model => model.PGender)
+                                    </td>
+                                    <td>
+                                         @Html.EditorFor(model => model.PGender)
+                                         @Html.ValidationMessageFor(model => model.Gender)
+                                    </td>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.PAge)
+                                    </td>
+                                    <td>
+                                         @Html.EditorFor(model => model.PAge)
+                                         @Html.ValidationMessageFor(model => model.PAge)
+                                    </td>
+                                </tr>
+                                
+                                
+                                <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.PHeight)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.PHeight)
+                                    @Html.ValidationMessageFor(model => model.PHeight)
+                                </td>
+
+                                <td id="user">
+                                    @Html.LabelFor(model => model.PPhysique)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.PPhysique)
+                                    @Html.ValidationMessageFor(model => model.PPhysique)
+                                </td>
+                                </tr>
+
+                                <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.PComplexion)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.PComplexion)
+                                    @Html.ValidationMessageFor(model => model.PComplexion)
+                                </td>
+
+                                <td id="user">
+                                    @Html.LabelFor(model => model.PReligion)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.PReligion)
+                                    @Html.ValidationMessageFor(model => model.PReligion)
+                                </td>
+                                </tr>
+
+                                <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.PCaste)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.PCaste)
+                                    @Html.ValidationMessageFor(model => model.PCaste)
+                                </td>
+
+                                <td id="user">
+                                    @Html.LabelFor(model => model.PMarritalStatus)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.PMarritalStatus)
+                                    @Html.ValidationMessageFor(model => model.PMarritalStatus)
+                                </td>
+                                </tr>
+
+                                 <tr>
+                               <td id="user">
+                                    @Html.LabelFor(model => model.PCountry)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.PCountry)
+                                    @Html.ValidationMessageFor(model => model.PCountry)
+                                </td>
+
+                                 <td id="user">
+                                    @Html.LabelFor(model => model.PCity)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.PCity)
+                                    @Html.ValidationMessageFor(model => model.PCity)
+                                </td>
+
+                                </tr>
+                              
+                            </table>
+                                
+                                
+                
+                <div class="clear"></div> 
+                                <h4>Contact</h4>
+                 	<table align="center"   cellpadding="0" cellspacing="0" border="0">
+                   <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Email)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Email)
+                                    @Html.ValidationMessageFor(model => model.Email)
+                                </td>
+                                    </tr>
+                         <tr>
+                                <td id="user">
+                                    @Html.LabelFor(model => model.Contact)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Contact)
+                                    @Html.ValidationMessageFor(model => model.Contact)
+                                </td>
+
+                                </tr>
+                     
+                     </table>
+
+                             <!--   <input type="submit" value="Apply Changes" /> -->
+                    
+                </form>
+                
+                <div class="clear"></div> 
+              </div>
+                
+           <!--   <button name="save" type="submit">Apply Changes</button> -->
+         <h2>@Html.ActionLink("Apply Changes", "Profile", new { id=Session["s_id"] })</h2>
+                <br /><br /><br>
+                <h2>@Html.ActionLink("Go To Profile", "Profile", new { id=Session["s_id"] })</h2>
+                </div>
+          </form>
+            <!--User Detail-->
+            </div>
+      </div>
+    </div>
+            
+          
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "QuickSearch";
+    Layout = "~/Views/Shared/User.cshtml";
+}
+
+<div style="padding:20px 15px 30px 15px;">
+        <h1><span>Advanced</span> Search</h1>
+
+<br>
+<br>
+
+<form method="post" action="/User">
+<strong>Looking For : </strong>
+    <select class="dob">
+                    <option selected>---Select---</option>
+                    <option>Bride</option>
+                    <option>Groom</option>                    
+                    </select>
+    <br />
+<strong>Age (From-To) : </strong>
+    <select class="dob">
+                    <option selected>From</option>
+                    <option>18</option>
+                    <option>19</option>                    
+                    </select>
+    <strong> To </strong>
+     <select class="dob">
+                    <option selected>To</option>
+                    <option>19</option>
+                    <option>20</option>                    
+                    </select>
+    <br />
+    <strong> Country </strong>
+     <select class="dob">
+                    <option selected>Pakistan</option>
+                    <option>A</option>
+                    <option>B</option>                    
+                    </select>
+     <br />
+     <strong> City </strong>
+     <select class="dob">
+                    <option selected>All</option>
+                    <option>A</option>
+                    <option>B</option>                    
+                    </select>
+     <br />
+     <strong> Marrital Status </strong>
+     <select class="dob">
+                    <option selected>---Select---</option>
+                    <option>Never Married</option>
+                    <option>Married but looking</option> 
+                     <option>Divorced</option>  
+                     <option>Widowed</option>  
+                     <option>Separated</option>                     
+                    </select>
+     <br />
+<br><br>
+<strong> Caste: </strong> <input type="text" name="pas">
+<br><br>
+<input type="submit" value="Search" >
+<br><br>
+</form>
+    
+
+    </div>
+

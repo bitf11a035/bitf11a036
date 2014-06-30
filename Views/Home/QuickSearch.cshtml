@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "QuickSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="padding:20px 15px 30px 15px;">
+        <h1><span>Advanced</span> Search</h1>
+
+<br>
+<br>
+
+<form method="post" action="/Home/Login">
+    <table>
+<tr ><td ><strong>Looking For : </strong></td><td>
+    <select class="dob">
+                    <option selected>---Select---</option>
+                    <option>Bride</option>
+                    <option>Groom</option>                    
+                    </select></td></tr><tr></tr>
+ 
+<tr><td><strong>Age (From-To) : </strong></td><td>
+    <select class="dob">
+                    <option selected>From</option>
+                    <option>18</option>
+                    <option>19</option>                    
+                    </select>
+  <strong> To </strong>
+     <select class="dob">
+                    <option selected>To</option>
+                    <option>19</option>
+                    <option>20</option>                    
+                    </select></td></tr>
+  
+ <tr><td>   <strong> Country : </strong></td><td>
+     <select class="dob">
+                    <option selected>Pakistan</option>
+                    <option>A</option>
+                    <option>B</option>                    
+                    </select></td></tr>
+    
+ <tr><td>    <strong> City : </strong></td><td>
+     <select class="dob">
+                    <option selected>All</option>
+                    <option>A</option>
+                    <option>B</option>                    
+                    </select></td></tr>
+    
+   <tr><td>  <strong> Marrital Status : </strong></td><td>
+     <select class="dob">
+                    <option selected>---Select---</option>
+                    <option>Never Married</option>
+                    <option>Married but looking</option> 
+                     <option>Divorced</option>  
+                     <option>Widowed</option>  
+                     <option>Separated</option>                     
+                    </select></td></tr>
+ 
+<tr><td><strong> Caste : </strong> </td><td><input type="text" name="pas"></td></tr>
+
+<tr><td></td><td><input type="submit" value="Search" ></td></tr>
+
+        </table>
+</form>
+    
+
+    </div>
